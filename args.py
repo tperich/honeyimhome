@@ -22,7 +22,9 @@ def build_parser():
     scan_parser_by.add_argument(
         "-s", "--ssid", help="Notify when this SSID is detected"
     )
-    scan_parser_by.add_argument("-d", "--database", help="Database to get targets from")
+    scan_parser_by.add_argument(
+        "-d", "--database", help="Database to get targets from", default="clients.db"
+    )
 
     # # `add` command
     # add_parser = subparsers.add_parser("add", help="Add a known client to database")

@@ -1,4 +1,3 @@
-import sqlite3
 from args import build_parser
 
 from rich import print
@@ -33,9 +32,9 @@ if __name__ == "__main__":
 
     if args.command == "scan":
         if args.database:
-            print(args.database)
-
-            exit()
+            # Load targets from DB
+            # MACs are used for scanning, and names/clients for displaying to user
+            pass
 
         try:
             scan_clients(
@@ -50,16 +49,16 @@ if __name__ == "__main__":
 
 
 def _database_stub():
-    conn = sqlite3.connect("clients.db")
-    c = conn.cursor()
+    # conn = sqlite3.connect("clients.db")
+    # c = conn.cursor()
 
-    c.execute(
-        """CREATE TABLE IF NOT EXISTS clients (
-        mac text PRIMARY KEY,
-        ssid text NOT NULL
-    )"""
-    )
-    conn.commit()
+    # c.execute(
+    #     """CREATE TABLE IF NOT EXISTS clients (
+    #     mac text PRIMARY KEY,
+    #     ssid text NOT NULL
+    # )"""
+    # )
+    # conn.commit()
 
     # c.execute("SELECT * FROM clients WHERE mac = ?", (src,))
     # client = c.fetchone()
@@ -74,5 +73,5 @@ def _database_stub():
     #     # print("[bold gray][R][/bold gray] [gray]{} [{}]".format(ssid, src))
     #     pass
 
-    c.close()
-    conn.close()
+    # c.close()
+    # conn.close()
