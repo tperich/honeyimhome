@@ -15,7 +15,7 @@ def build_parser():
     scan_parser.add_argument(
         "-i", "--iface", help="Name of the wireless interface to use", required=True
     )
-    scan_parser_by = scan_parser.add_mutually_exclusive_group(required=True)
+    scan_parser_by = scan_parser.add_mutually_exclusive_group()
     scan_parser_by.add_argument(
         "-m", "--mac", help="Notify when this MAC address is detected"
     )

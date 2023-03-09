@@ -20,9 +20,10 @@ def scan_clients(interface, target_mac, target_ssid):
         # Notify when target appears
         if target_mac and src.lower() == target_mac.lower():
             print(f"[:rocket:] {target_mac} is here!")
-
-        if target_ssid and ssid.lower() == target_ssid.lower():
+        elif target_ssid and ssid.lower() == target_ssid.lower():
             print(f"[:rocket:] {ssid} is here!")
+        elif ssid or src:
+            print(f"[+] {ssid} [{src}] found nearby...")
 
     sniff(iface=interface, prn=process_packet)
 
@@ -75,3 +76,4 @@ def _database_stub():
 
     # c.close()
     # conn.close()
+    pass
