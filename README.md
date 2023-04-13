@@ -1,3 +1,7 @@
+# Honey I'm Home
+
+Track nearby devices based on WiFi beacons, using MAC addresses!
+
 ### Usage examples
 
 | Command                                               | Result                                                          |
