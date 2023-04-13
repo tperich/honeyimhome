@@ -1,6 +1,6 @@
 # Honey I'm Home
 
-Track nearby devices based on WiFi beacons, using MAC addresses!
+Track nearby devices based on WiFi beacons, using MAC addresses! :rocket:
 
 ### Usage examples
 
